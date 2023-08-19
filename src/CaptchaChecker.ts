@@ -11,12 +11,8 @@ export class CaptchaChecker {
         this._bar = new Bar.SingleBar({}, Bar.Presets.shades_classic);
     }
 
-    private getSiteContent(link: string): string {
-        return fetch(formatLink(link)).text();
-    }
-
     private hasCaptcha(link: string): boolean {
-        return this.getSiteContent(link).includes("Man or machine");
+        return !fetch(formatLink(link)).ok;
     }
 
     public getSitesWithoutCapcha(): ReadonlyArray<string> {
