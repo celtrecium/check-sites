@@ -32,6 +32,5 @@ export class CaptchaChecker {
         this._bar.stop();
 
         return result;
-}
-
+    }
 }
