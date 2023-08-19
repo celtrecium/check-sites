@@ -19,6 +19,8 @@
   "devDependencies": {
     "@types/argparse": "^2.0.10",
     "@types/cli-progress": "^3.11.0",
+    "@types/node": "^20.5.1",
+    "@types/sync-fetch": "^0.4.0",
     "typescript": "^5.1.6"
   }
 }
