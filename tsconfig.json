@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+      "module": "commonjs",
+      "target": "ES2016",
+      "strict": true,
+      "esModuleInterop": true,
+      "types": [ 
+        "node", 
+        "sync-fetch" 
+      ],
+      "outDir": "dist"
+    },
+    "include": [
+      "src/AvailabilityChecker.ts", 
+      "src/CaptchaChecker.ts", 
+      "src/bin.ts", 
+      "src/Main.ts", 
+      "src/Utils.ts"
+    ],
+}

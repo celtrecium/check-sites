@@ -1,0 +1,24 @@
+{
+  "name": "check-sites",
+  "version": "1.0.0",
+  "description": "check sites on capcha",
+  "main": "check_sites.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "bin": {
+    "check-sites": "dist/bin.js"
+  },
+  "author": "celtrecium",
+  "license": "MIT",
+  "dependencies": {
+    "argparse": "^2.0.1",
+    "cli-progress": "^3.12.0",
+    "sync-fetch": "^0.5.2"
+  },
+  "devDependencies": {
+    "@types/argparse": "^2.0.10",
+    "@types/cli-progress": "^3.11.0",
+    "typescript": "^5.1.6"
+  }
+}
