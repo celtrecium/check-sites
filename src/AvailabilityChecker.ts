@@ -13,7 +13,9 @@ export class AvailabilityChecker {
 
     private isSiteAvailable(link: string): boolean {
         try { 
-            return fetch(link).ok; 
+            fetch(link);
+            
+            return true;
         } catch { 
             return false; 
         }
