@@ -1,5 +1,3 @@
-import { match } from "assert";
-
 const DEFAULT_LINK_PREFIX = "https://";
 
 export function formatLink(link: string): string {
