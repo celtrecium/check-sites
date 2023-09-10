@@ -47,7 +47,7 @@ export async function main(): Promise<void> {
     writeLinks((await collector.filterByAvailability()).toSites(), args?.available);
 
     if (args?.captcha) {
-      writeLinks((await collector.filterByPresenceOfCaptcha()).toSites(), args?.captcha);
+      writeLinks((await collector.filterByAbsenceOfCaptcha()).toSites(), args?.captcha);
     }
   });
 }

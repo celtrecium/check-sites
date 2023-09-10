@@ -27,7 +27,7 @@ export class FilteredSiteCollector {
   }
 
   public async filterByAvailability(): Promise<FilteredSiteCollector> {
-    console.log("Checking _sites for availability");
+    console.log("Checking websites for availability");
 
     await this.process(async s => s.checkAvailability());
     this._sites = this._sites.filter(s => s.isAvailable);
@@ -35,11 +35,11 @@ export class FilteredSiteCollector {
     return this;
   }
 
-  public async filterByPresenceOfCaptcha(): Promise<FilteredSiteCollector> {
-    console.log("Checking web_sites for captcha");
+  public async filterByAbsenceOfCaptcha(): Promise<FilteredSiteCollector> {
+    console.log("Checking websites for lack of captcha");
 
     await this.process(async s => s.checkPresenceOfCaptcha());
-    this._sites = this._sites.filter(s => s.hasCaptcha);
+    this._sites = this._sites.filter(s => !s.hasCaptcha);
 
     return this;
   }
